@@ -6,7 +6,6 @@ import uuidv4 from 'uuid/v4';
 * dodaje id pomoću dodatka uuid, dodaje vrijeme i datum kreiranja zadatka, te stavlja
 * selected na false, prilikom označavanja reda za brisanje ovaj property je true
 * i vraća objekt u reducer
-*
 */
 export const addTodo = (subject, message) => {
   return {

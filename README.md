@@ -11,7 +11,7 @@ lozinka: Flipkod54321
 
 url : [tihi321.github.io/Redux-Todolist](https://tihi321.github.io/Redux-Todolist/)
 
-Za ovaj projekt korišten je react, redux te bootstrap i bootstrap table, za podatke korištnen immutable.js
+Za ovaj projekt korišten je react, redux te bootstrap i bootstrap table, za podatke korišten immutable.js
 
 ## Struktura foldera
 
