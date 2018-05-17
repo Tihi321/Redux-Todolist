@@ -70,3 +70,7 @@ todo/
 ```
 
 Više o načinu rada aplikacije u komentarima unutar koda u folderima `actions`, `containers` i `reducers`
+
+#### Vrijeme riješavanja:
+
+3 dana
