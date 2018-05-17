@@ -21,7 +21,9 @@ class App extends Component {
     todosRef.on("value", function(snapshot) {
       const snap = snapshot.val();
       let mapArray = [];
-
+      if(snap === undefined || snap === null){
+        return List();
+      }
       for (const key of Object.keys(snap)) {
         snap[key]["firebase"] = key;
         mapArray.push(Map(snap[key]));
