@@ -13,5 +13,3 @@ export const ACTIVATE_TABLE_ROW = "ACTIVATE_TABLE_ROW";
 
 export const VALIDATION = "VALIDATION";
 export const ATTEMPT = "ATTEMPT";
-
-export const SET_DATABASE_DATA = "SET_DATABASE_DATA";

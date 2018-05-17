@@ -41,7 +41,6 @@ class EditForm extends Component {
 
   handleOnSubmit = (e) => {
     e.preventDefault();
-    console.log(this.props);
 
     if (e.target.elements.subject.value.length < 1) {
 

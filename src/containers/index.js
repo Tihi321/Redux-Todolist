@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import Home from "../components/Home.jsx";
 import { activateTableRow } from "../actions/forms";
 import { authenticateUser, failedAttempt } from "../actions/login";
-import { addTodo, removeTodo, editTodo, selectTodo, setDatabaseData } from "../actions/todos";
+import { addTodo, removeTodo, editTodo, selectTodo } from "../actions/todos";
 import { toggleAddModal, toggleEditModal, toggledDeleteModal, validationAddModal, validationEditModal } from "../actions/modals";
 
 const mapStateToProps = state => {
@@ -35,9 +35,7 @@ const mapDispatchToProps = dispatch => {
       toggledDeleteModal: () => dispatch(toggledDeleteModal()),
       validationAddModal: (validation) => dispatch(validationAddModal(validation)),
       validationEditModal: (validation) => dispatch(validationEditModal(validation)),
-      activateTableRow: (row) => dispatch(activateTableRow(row)),
-      setDatabaseData: (data) => dispatch(setDatabaseData(data))
-
+      activateTableRow: (row) => dispatch(activateTableRow(row))
     }
   };
 };

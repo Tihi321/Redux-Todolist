@@ -1,4 +1,4 @@
-import { REMOVE_TODO, ADD_TODO, EDIT_TODO, SELECT_TODO, SET_DATABASE_DATA } from "./types";
+import { REMOVE_TODO, ADD_TODO, EDIT_TODO, SELECT_TODO } from "./types";
 import uuidv4 from 'uuid/v4';
 
 export const addTodo = (subject, message) => {
@@ -36,12 +36,5 @@ export const selectTodo = (selected, uuid) => {
       selected: selected,
       uuid: uuid
     }
-  };
-};
-
-export const setDatabaseData = (data) => {
-  return {
-    type: SET_DATABASE_DATA,
-    payload: data
   };
 };

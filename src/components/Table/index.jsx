@@ -39,7 +39,7 @@ const Table = (props) => {
   }
 
   const dateFormatter = (cell, row) => {
-    const date = new Date(cell);
+    const date = new Date(JSON.parse(cell));
     return `${('0' + date.getDate()).slice(-2)}/${('0' + (date.getMonth() + 1)).slice(-2)}/${date.getFullYear()}`;
   }
 
