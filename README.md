@@ -11,7 +11,7 @@ lozinka: Flipkod54321
 
 url : [todo.tihomir-selak.from.hr](http://todo.tihomir-selak.from.hr/).
 
-Za ovaj projekt je korišten firebase za bazu i autentikaciju, react, redux te bootstrap i bootstrap table
+Za ovaj projekt je korišten firebase za bazu i autentikaciju, react, redux te bootstrap i bootstrap table, za podatke korišten immutable.js
 
 ## Struktura foldera
 
@@ -67,4 +67,4 @@ todo/
   ...
 ```
 
-Više o načinu rada aplikacije u komentarima unutar koda
+Više o načinu rada aplikacije u komentarima unutar koda u folderima `actions`, `containers` i `reducers`
