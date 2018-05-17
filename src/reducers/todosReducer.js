@@ -1,6 +1,12 @@
 import { List } from "immutable";
 import { SELECT_TODO, SET_DATABASE_DATA } from "../actions/types";
 
+/*
+* Ovdje je samo select operacija koja postavlja jeli red odabran, 
+* ta informacija se koristi prilikom brisanja, ovdje crud operacije ovdje nisu potrebne
+* jer promjene ne ulaze u stanje store-a jer firebase usluga sama šalje promjene automatski
+*/
+
 const init = List();
 
 const todosReducer = (state = init, action) => {

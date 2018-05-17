@@ -5,6 +5,11 @@ import { authenticateUser, failedAttempt } from "../actions/login";
 import { selectTodo, setDatabaseData } from "../actions/todos";
 import { toggleAddModal, toggleEditModal, toggledDeleteModal, validationAddModal, validationEditModal } from "../actions/modals";
 
+/*
+* Ovdje se spaja pomoću react-redux, store od reduxa sa reactom
+* spaja se stanje store-a i funkcije za izmjenu stanja store-a sa reactom
+*/
+
 const mapStateToProps = state => {
   return {
     data: {
