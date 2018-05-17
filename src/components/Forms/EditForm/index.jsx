@@ -1,18 +1,7 @@
 import React, { Component } from "react";
-import {
-  SAVE_BUTTON_TEXT,
-  CANCEL_BUTTON_TEXT
-} from "../../../config/constants.js";
-import {
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  ButtonGroup,
-  FormFeedback
-} from "reactstrap";
 import { editTodo } from '../../../middleware/firebase';
+import { SAVE_BUTTON_TEXT, CANCEL_BUTTON_TEXT } from "../../../config/constants.js";
+import { Button, Form, FormGroup, Label, Input, ButtonGroup, FormFeedback } from "reactstrap";
 
 class EditForm extends Component {
   constructor(props) {

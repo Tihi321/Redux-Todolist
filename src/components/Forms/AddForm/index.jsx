@@ -1,29 +1,17 @@
 import React from "react";
-import {
-  SAVE_BUTTON_TEXT,
-  CANCEL_BUTTON_TEXT
-} from "../../../config/constants.js";
-import {
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  ButtonGroup,
-  FormFeedback
-} from "reactstrap";
 import uuidv4 from "uuid/v4";
 import { firebaseAdd } from "../../../middleware/firebase";
+import { SAVE_BUTTON_TEXT, CANCEL_BUTTON_TEXT } from "../../../config/constants.js";
+import { Button, Form, FormGroup, Label, Input, ButtonGroup, FormFeedback } from "reactstrap";
 
 const AddForm = props => {
-
   const addTodo = (subject, message) => {
     return {
-        created: JSON.stringify(new Date()),
-        message: message,
-        selected: false,
-        subject: subject,
-        uuid: uuidv4()
+      created: JSON.stringify(new Date()),
+      message: message,
+      selected: false,
+      subject: subject,
+      uuid: uuidv4()
     };
   };
 
