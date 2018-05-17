@@ -14,39 +14,20 @@ const App = props => {
   });
 
   const { funcs, data } = props;
-  return (
-    <ListGroup>
+  return <ListGroup className={props.className}>
       <TitleStyled />
       <ListGroupItem>
         <ButtonGroup className="mb-2">
-          <AddButton
-            validationAddModal={funcs.validationAddModal}
-            addModal={data.modals.addModal}
-            toggleAddModal={funcs.toggleAddModal}
-            addTodo={funcs.addTodo}
-          />
-          <DeleteButton
-            deleteModal={data.modals.deleteModal}
-            toggledDeleteModal={funcs.toggledDeleteModal}
-            todos={todosId}
-            removeTodo={funcs.removeTodo}
-          />
+          <AddButton validationAddModal={funcs.validationAddModal} addModal={data.modals.addModal} toggleAddModal={funcs.toggleAddModal} addTodo={funcs.addTodo} />
+          <DeleteButton deleteModal={data.modals.deleteModal} toggledDeleteModal={funcs.toggledDeleteModal} todos={todosId} removeTodo={funcs.removeTodo} />
         </ButtonGroup>
-        <Table
-          activateTableRow={funcs.activateTableRow}
-          activeTableRow={data.form.activeRow}
-          validationEditModal={funcs.validationEditModal}
-          editModal={data.modals.editModal}
-          toggleEditModal={funcs.toggleEditModal}
-          editTodo={funcs.editTodo}
-          selectTodo={funcs.selectTodo}
-          todos={todosId}
-        />
+        <Table activateTableRow={funcs.activateTableRow} activeTableRow={data.form.activeRow} validationEditModal={funcs.validationEditModal} editModal={data.modals.editModal} toggleEditModal={funcs.toggleEditModal} editTodo={funcs.editTodo} selectTodo={funcs.selectTodo} todos={todosId} />
       </ListGroupItem>
-    </ListGroup>
-  );
+    </ListGroup>;
 };
 
 export const AppStyled = styled(App)`
-  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0.2);
+  border: 3px solid #ef8931;
+  border-radius: 8px;
 `;
