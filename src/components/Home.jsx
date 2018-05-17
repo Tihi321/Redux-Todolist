@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import App from './App.jsx';
-import Login from './Login.jsx';
+import { AppStyled } from "./App.jsx";
+import { LoginStyled } from "./Login.jsx";
 import fire from '../config/fire';
 
 class Home extends Component {
@@ -23,11 +23,17 @@ class Home extends Component {
     });
   }
   render(){
-    return (
-      <div className="container mt-5">
-        {this.props.loginData.validation ? (<App data={this.props.data} funcs={this.props.funcs} />) : (<Login authenticateUser={this.props.login.authenticateUser} failedAttempt={this.props.login.failedAttempt} attempt={this.props.loginData.attempt} />)}
-      </ div>
-    );
+    return <div className="container mt-5">
+        {this.props.loginData.validation ? (
+          <AppStyled data={this.props.data} funcs={this.props.funcs} />
+        ) : (
+          <LoginStyled
+            authenticateUser={this.props.login.authenticateUser}
+            failedAttempt={this.props.login.failedAttempt}
+            attempt={this.props.loginData.attempt}
+          />
+        )}
+      </div>;
     }
 }
 

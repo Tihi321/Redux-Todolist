@@ -1,11 +1,19 @@
-import React from 'react';
+import React from "react";
+import { TITLE } from "../../config/constants.js";
+import fire from "../../config/fire";
+import { Button } from "reactstrap";
 
-const Title = ({ children }) => {
+export const Title = ({ className }) => {
+  const logout = () => {
+    fire.auth().signOut();
+  };
+
   return (
-    <h1 className="text-center">
-      {children}
-    </h1>
+    <div className={className}>
+      <h2>{TITLE}</h2>
+      <Button onClick={logout} color="info">
+        Odjava
+      </Button>
+    </div>
   );
-}
-
-export default Title;
+};

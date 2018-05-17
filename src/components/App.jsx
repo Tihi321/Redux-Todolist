@@ -1,12 +1,12 @@
-import { ButtonGroup, ListGroup, ListGroupItem, Button } from "reactstrap";
+import { ButtonGroup, ListGroup, ListGroupItem } from "reactstrap";
 import DeleteButton from "./Buttons/DeleteButton/";
-import { TITLE } from "../config/constants.js";
 import AddButton from "./Buttons/AddButton/";
 import { List, Map } from "immutable";
 import fire from "../config/fire";
-import Title from "./Title/";
+import { TitleStyled } from "./Title/styled";
 import Table from "./Table/";
 import React, { Component } from "react";
+import styled from "styled-components";
 
 class App extends Component {
   constructor(props) {
@@ -35,10 +35,6 @@ class App extends Component {
     this.props.funcs.setDatabaseData(data);
   }
 
-  logout = () => {
-    fire.auth().signOut();
-  };
-
   render() {
     const todosId = this.props.data.todos.map((todo, index) => {
       return todo.merge({
@@ -47,14 +43,9 @@ class App extends Component {
     });
     const { funcs, data } = this.props;
     return (
-      <ListGroup>
-        <ListGroupItem className="text-right">
-          <Button onClick={this.logout} color="info">
-            Odjava
-          </Button>
-        </ListGroupItem>
+      <ListGroup className={this.props.className}>
         <ListGroupItem>
-          <Title>{TITLE}</Title>
+          <TitleStyled />
         </ListGroupItem>
         <ListGroupItem>
           <ButtonGroup className="mb-2">
@@ -84,4 +75,8 @@ class App extends Component {
   }
 }
 
-export default App;
+export const AppStyled = styled(App)`
+  box-shadow: 1px 1px 5px rgba(0, 0, 0.2);
+  border: 3px solid #ef8931;
+  border-radius: 8px;
+`;
