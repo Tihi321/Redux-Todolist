@@ -1,6 +1,3 @@
-export const ADD_TODO = "ADD_TODO";
-export const REMOVE_TODO = "REMOVE_TODO";
-export const EDIT_TODO = "EDIT_TODO";
 export const SELECT_TODO = "SELECT_TODO";
 
 export const TOGGLE_ADD_MODAL = "TOGGLE_ADD_MODAL";

@@ -16,7 +16,7 @@ export const EditButton = (props) => {
       <Modal isOpen={props.editModal.popup} toggle={toggle} className={props.className}>
         <ModalHeader toggle={toggle}>Add New Todo</ModalHeader>
         <ModalBody>
-          <EditForm activeTableRow={props.activeTableRow} validationEditModal={props.validationEditModal} validation={props.validation} toggleEditModal={props.toggleEditModal} editTodo={props.editTodo} />
+          <EditForm activeTableRow={props.activeTableRow} validationEditModal={props.validationEditModal} validation={props.validation} toggleEditModal={props.toggleEditModal} />
         </ModalBody>
       </Modal>
     </Fragment>

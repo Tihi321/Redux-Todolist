@@ -30,7 +30,7 @@ const Table = (props) => {
 
   const editButton = (cell, row, enumObject, index) => {
     return (
-      <EditButton activateTableRow={props.activateTableRow} activeTableRow={props.activeTableRow} validationEditModal={props.validationEditModal} validation={props.editModal.validation} editModal={props.editModal} toggleEditModal={props.toggleEditModal} editTodo={props.editTodo} row={row} />
+      <EditButton activateTableRow={props.activateTableRow} activeTableRow={props.activeTableRow} validationEditModal={props.validationEditModal} validation={props.editModal.validation} editModal={props.editModal} toggleEditModal={props.toggleEditModal} row={row} />
     );
   }
 
@@ -39,7 +39,7 @@ const Table = (props) => {
   }
 
   const dateFormatter = (cell, row) => {
-    const date = new Date(cell);
+    const date = new Date(JSON.parse(cell));
     return `${('0' + date.getDate()).slice(-2)}/${('0' + (date.getMonth() + 1)).slice(-2)}/${date.getFullYear()}`;
   }
 

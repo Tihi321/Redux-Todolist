@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react';
 import { Button, Modal, ModalHeader, ModalFooter } from 'reactstrap';
 import { DELETE_BUTTON_TEXT, CANCEL_BUTTON_TEXT } from '../../../config/constants.js';
+import { removeFromFirebase } from "../../../middleware/firebase";
 
 const DeleteButton = (props) => {
+
 
   const toggle = () => {
     props.toggledDeleteModal();
@@ -16,7 +18,7 @@ const DeleteButton = (props) => {
   }
 
   const handleOnRemove = () => {
-    props.removeTodo(props.todos);
+    removeFromFirebase(props.todos.filter((v, k) => v.get('selected') === true));
     toggle();
   }
 
