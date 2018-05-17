@@ -1,6 +1,10 @@
 import { List, Map } from "immutable";
 import { REMOVE_TODO, ADD_TODO, EDIT_TODO, SELECT_TODO } from "../actions/types";
 
+/*
+* Ovdje su crud operacije nad todo listom, te ulazni podatci store-a
+*/
+
 const init = List([
   Map({
     created: '"2018-05-16T21:00:33.531Z"',

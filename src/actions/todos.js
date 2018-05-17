@@ -1,6 +1,13 @@
 import { REMOVE_TODO, ADD_TODO, EDIT_TODO, SELECT_TODO } from "./types";
 import uuidv4 from 'uuid/v4';
 
+/*
+* Funkcija prima naslov zadatka i poruku zadatka, te stvara objekt sa njima i 
+* dodaje id pomoću dodatka uuid, dodaje vrijeme i datum kreiranja zadatka, te stavlja
+* selected na false, prilikom označavanja reda za brisanje ovaj property je true
+* i vraća objekt u reducer
+*
+*/
 export const addTodo = (subject, message) => {
   return {
     type: ADD_TODO,

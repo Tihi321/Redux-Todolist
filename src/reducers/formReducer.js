@@ -1,5 +1,10 @@
 import { ACTIVATE_TABLE_ROW } from "../actions/types";
 
+/*
+* prilikom pritiska na edit button, funkcija activateTableRow šalje red ispod edit buttona
+* koji ulazi u stanje activeRow
+*/
+
 const init = {
   activeRow:undefined
   };

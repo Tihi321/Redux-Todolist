@@ -12,7 +12,7 @@ import {
 import styled from "styled-components";
 
 const Login = props => {
-  console.log();
+
   const handleOnSubmit = e => {
     e.preventDefault(e);
     const useremail = e.target.userEmail.value;
