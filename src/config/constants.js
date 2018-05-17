@@ -1,4 +1,4 @@
-export const TITLE = "Aplikacija Zadaci";
+export const TITLE = "Redux Todo";
 export const ADD_BUTTON_TEXT = "Dodaj";
 export const SAVE_BUTTON_TEXT = "Snimi";
 export const DELETE_BUTTON_TEXT = "Obriši";

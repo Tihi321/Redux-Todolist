@@ -1,11 +1,25 @@
-import React from 'react';
+import React from "react";
+import { TITLE } from "../../config/constants";
+import { ListGroupItem, Button } from "reactstrap";
+import fire from "../../config/fire";
+import styled from 'styled-components';
 
-const Title = ({ children }) => {
+const Title = ({ className }) => {
+
+  const logout = () => {
+    fire.auth().signOut();
+  };
+
   return (
-    <h1 className="text-center">
-      {children}
-    </h1>
+    <ListGroupItem className={className}>
+      <Button onClick={logout} color="info">
+        Odjava
+      </Button>
+      <h1>{TITLE}</h1>
+    </ListGroupItem>
   );
-}
+};
 
-export default Title;
+export const TitleStyled = styled(Title)`
+  border-radius: 5px;
+`;

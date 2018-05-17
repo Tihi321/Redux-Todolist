@@ -1,17 +1,12 @@
-import { ButtonGroup, ListGroup, ListGroupItem, Button } from "reactstrap";
+import { ButtonGroup, ListGroup, ListGroupItem } from "reactstrap";
 import DeleteButton from "./Buttons/DeleteButton/";
-import { TITLE } from "../config/constants.js";
 import AddButton from "./Buttons/AddButton/";
-import fire from "../config/fire";
-import Title from "./Title/";
+import { TitleStyled } from "./Title/";
 import Table from "./Table/";
 import React from "react";
+import styled from "styled-components";
 
 const App = props => {
-  const logout = () => {
-    fire.auth().signOut();
-  };
-
   const todosId = props.data.todos.map((todo, index) => {
     return todo.merge({
       id: index
@@ -21,14 +16,7 @@ const App = props => {
   const { funcs, data } = props;
   return (
     <ListGroup>
-      <ListGroupItem className="text-right">
-        <Button onClick={logout} color="info">
-          Odjava
-        </Button>
-      </ListGroupItem>
-      <ListGroupItem>
-        <Title>{TITLE}</Title>
-      </ListGroupItem>
+      <TitleStyled />
       <ListGroupItem>
         <ButtonGroup className="mb-2">
           <AddButton
@@ -59,4 +47,6 @@ const App = props => {
   );
 };
 
-export default App;
+export const AppStyled = styled(App)`
+  border-radius: 5px;
+`;

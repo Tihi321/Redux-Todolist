@@ -2,6 +2,7 @@ import React from 'react';
 import { LOGIN_BUTTON_TEXT } from '../config/constants.js';
 import { Button, Form, FormGroup, Label, Input, ButtonGroup, Alert } from 'reactstrap';
 import fire from '../config/fire';
+import styled from "styled-components";
 
 const Login = (props) => {
 console.log();
@@ -38,4 +39,7 @@ console.log();
     </div>
   );
 }
-export default Login;
+
+export const LoginStyled = styled(Login) `
+  border-radius: 5px;
+`;
