@@ -13,6 +13,8 @@ url : [tihi321.github.io/Redux-Todolist](https://tihi321.github.io/Redux-Todolis
 
 Za ovaj projekt korišten je react, redux te bootstrap i bootstrap table, za podatke korišten immutable.js
 
+Pošto ovdje nema baze, crud operacije samo mjenjaju stanje store-a i nalaze se unutar `reducers/todosReducer.js`
+
 ## Struktura foldera
 
 ```
