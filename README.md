@@ -1,6 +1,8 @@
 ## Redux Todo
 
-Za pokretanje ovog projekta, napraviti instalaciju potrebnih modula `yarn install` te pokrenuti node script `yarn start`, ovo je implementacija bez backend baze, za implementacija sa Firebaseom pogledati branch firebase
+### Firebase implementacija je pod branch-om firebase
+
+Za pokretanje ovog projekta, napraviti instalaciju potrebnih modula `yarn install` te pokrenuti node script `yarn start`, ovo je implementacija bez backend baze, za implementacija sa Firebase servisom pogledati branch firebase
 
 
 ### Primjer 
