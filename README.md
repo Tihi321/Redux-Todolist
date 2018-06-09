@@ -2,15 +2,6 @@
 
 Za pokretanje ovog projekta, kreirati datoteku `fire.js` unutar foldera `src/config` te kopirati kredencije sa vašeg firebase računa, napraviti instalaciju potrebnih modula `yarn install` te pokrenuti node script `yarn start`
 
-
-### Primjer 
-
-nadimak: flipkod@flipkod.hr 
-
-lozinka: Flipkod54321
-
-url : [todo.tihomir-selak.from.hr](http://todo.tihomir-selak.from.hr/).
-
 Za ovaj projekt je korišten firebase za bazu i autentikaciju, react, redux te bootstrap i bootstrap table, za podatke korišten immutable.js
 
 Kod firebase-a promjene ne ulaze u stanje store-a jer firebase usluga sama šalje promjene automatski, te time crud operacije tamo nisu potrebne, crud operacije se nalaze unutar `middleware/firebase.js`
